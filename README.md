@@ -94,6 +94,9 @@ Our platform consists of six integrated lakes:
 - User interface
 - API management
 
+### Architecture Diagram 🔄📊
+![6740e884e2af7_Groclake_submission_template__1 pptx](https://github.com/user-attachments/assets/835ee9cc-0700-4c60-8d7e-f84d66a4b5d6)
+
 ## Implementation Approach 🛠️
 
 ### Data Management
@@ -116,59 +119,3 @@ embeddings = processor.create_embeddings(market_data)
 trends = processor.analyze_pricing_trends(embeddings)
 ```
 
-## Getting Started 🚀
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/groclake.git
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Configure your environment:
-```bash
-cp .env.example .env
-# Edit .env with your credentials
-```
-
-4. Run the application:
-```bash
-python app.py
-```
-
-## Documentation 📚
-
-- [API Reference](docs/api.md)
-- [User Guide](docs/user-guide.md)
-- [Integration Guide](docs/integration.md)
-- [Contributing Guidelines](CONTRIBUTING.md)
-
-## Features in Development 🔄
-
-- Advanced pricing analytics
-- Machine learning model improvements
-- Enhanced sustainability metrics
-- Extended ONDC integration
-
-## Contributing 🤝
-
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting pull requests.
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support 💬
-
-- Create an issue
-- Email: support@groclake.com
-- Documentation: [docs.groclake.com](https://docs.groclake.com)
-
-## Acknowledgments 🙏
-
-- ONDC for their support and guidance
-- Our contributing developers
-- The vendor community for valuable feedback
