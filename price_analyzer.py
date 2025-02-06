@@ -13,15 +13,11 @@ st.set_page_config(
     page_icon="💰",
     layout="wide",
     menu_items={
-        'Get Help': 'https://www.example.com/help',
-        'Report a bug': "https://www.example.com/bug",
         'About': "# Product Price Analyzer\n This application helps analyze market prices and provides AI-powered recommendations."
     }
 )
 
 # Initialize Groclake credentials
-# GROCLAKE_API_KEY = "4c56ff4ce4aaf9573aa5dff913df997a"
-# GROCLAKE_ACCOUNT_ID = "d2b9d7150a1f6693817d82d4ca9b701d"
 os.environ["GROCLAKE_API_KEY"] = os.getenv("GROCLAKE_API_KEY")
 os.environ["GROCLAKE_ACCOUNT_ID"] = os.getenv("GROCLAKE_ACCOUNT_ID")
 
@@ -95,6 +91,7 @@ def fetch_product_data(query):
     try:
         amazon_data = amazon_response.json().get("organic_results", [])
         google_data = google_response.json().get("shopping_results", [])
+        print(amazon_data + google_data)
         return amazon_data + google_data
     except Exception as e:
         st.error(f"Error fetching data: {str(e)}")
@@ -210,8 +207,9 @@ query = st.text_input("Enter product name:", "")
 if st.button("Analyze"):
     if query:
         with st.spinner("Fetching market data..."):
-            product_data = fetch_product_data(query)
             
+            product_data=fetch_product_data(query)
+            st.session_state['product_data']=product_data
             if product_data:
                 st.subheader("📊 Market Analysis")
                 
