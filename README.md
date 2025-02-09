@@ -94,3 +94,10 @@ Our platform consists of six integrated lakes:
 - User interface
 - API management
 
+- 
+## Demo Vedio
+
+### Working of the Application Developed!!!
+
+https://github.com/user-attachments/assets/cb455c73-7d17-4286-a527-499b05d0deb9
+
